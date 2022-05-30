@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>To Do List</title>
+
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<main>
+			<section>
+				<h1>Sneakers Collected</h1>
+				<form action="/messages" method="POST">
+					<!-- <label for="input"></label> -->
+					<input id="input" type="text" name="shoe" placeholder="Items">
+					<button type="submit" class="addToList">Add to List</button>
+				</form>
+				
+				
+			</section>
+			<section>
+				<ul>
+					<% for(let i = 0; i < messages.length; i++){%>
+						<li>
+							<span><%=messages[i].shoe%></span>
+							<button class="delete">Delete</button>
+							<button class="crossout">Crossout</button>
+						</li>
+					<% } %>
+				</ul>
+			</section>
+			<section>
+				<h3 class="amount"></h3>
+				<button class="clearList">Clear List</button>
+			</section>
+		</main>
+
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
